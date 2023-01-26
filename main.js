@@ -1,4 +1,9 @@
 
+const imagePaper = document.querySelector(".paper");
+const imageRock = document.querySelector(".rock");
+const imageScissors = document.querySelector(".scissors");
+
+
 // Function to generate computer's choice -> returns rock papper or sciscors
 
 let array = ["rock", "papper", "scissors"];

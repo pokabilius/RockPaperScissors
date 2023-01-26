@@ -1,0 +1,117 @@
+@font-face {
+  font-family:"retro";
+  src: url(./fonts/StreetRuinsDemoRegular-qZ4R1.ttf) format('truetype');
+  
+}
+
+
+html {
+    font-size: 16px;
+    background-color: black;
+    font-family: "retro";
+
+
+}
+
+.title {
+    font-size: 5rem;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.display {
+    display: flex;
+    /* background-color: blue; */
+    flex: 1;
+    padding: 10px;
+    margin-top: 200px;
+}
+
+.pcmodal, .playermodal {
+    flex-direction: column;
+    flex: 1;
+    
+    margin: 20px;
+    padding: 20px;
+    
+
+} 
+
+.pcmodal {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.playermodal {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.pcmodal .choices {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.pcmodal .pc {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 40px;  
+}
+
+
+.playermodal .choices {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.playermodal .player {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 40px;  
+}
+
+.rock {
+    background-image: url("./images/rock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+}
+
+.paper {
+    
+    background-image: url("./images/paper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    
+}
+
+.scissors {
+    
+    background-image: url("./images/scissors.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    
+}
+
+.lives {
+    
+    background-image: url("./images/heart.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 90px;
+    
+}
