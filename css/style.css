@@ -9,8 +9,6 @@ html {
     font-size: 16px;
     background-color: black;
     font-family: "retro";
-
-
 }
 
 .title {
@@ -18,7 +16,6 @@ html {
     color: whitesmoke;
     text-align: center;
     padding: 20px;
-    
 }
 
 .display {
@@ -32,11 +29,8 @@ html {
 .pcmodal, .playermodal {
     flex-direction: column;
     flex: 1;
-    
     margin: 20px;
     padding: 20px;
-    
-
 } 
 
 .pcmodal {

@@ -1,25 +1,27 @@
 @font-face {
   font-family:"retro";
-  src: url(/css/fonts/StreetRuinsDemoRegular-qZ4R1.ttf) format('truetype');
+  src: url(./css/fonts/VIDEOPHREAK.ttf) format('truetype');
   
 }
 
+.playerchoice, .pcchoice, .result {
+    color: red;
+    text-align: center;
+}
 
 html {
-    font-size: 30px;
+    font-size: 50px;
     background-color: black;
-    font-family: "retro";
-    letter-spacing: 5px;
-
-
+    font-family: "retro";    
 }
 
 .title {
-    font-size: 2rem;
-    color: whitesmoke;
+    font-size: 1.5rem;
+    color: yellow;
     text-align: center;
     padding: 20px;
-    
+    letter-spacing: 10px;
+    transform: skew(-25deg);
 }
 
 .display {
@@ -37,17 +39,16 @@ html {
     margin: 20px;
     padding: 20px;
     
-
 } 
 
 .pcmodal {
-    background-color: white;
-    border-radius: 10px;
+    background-color: yellow;
+    border-radius: 50px 10px;
 }
 
 .playermodal {
-    background-color: white;
-    border-radius: 10px;
+    background-color: greenyellow;
+    border-radius: 10px 50px;
 }
 
 .pcmodal .choices {
@@ -55,6 +56,7 @@ html {
     flex: 1;
     justify-content: space-between;
     padding: 40px;
+    
 }
 
 .pcmodal .pc {
@@ -70,6 +72,7 @@ html {
     flex: 1;
     justify-content: space-between;
     padding: 40px;
+    
 }
 
 .playermodal .player {
@@ -85,6 +88,9 @@ html {
     background-position: center;
     height: 150px;
     width: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+    transition: all 0.07s;
 }
 
 .paper {
@@ -94,6 +100,9 @@ html {
     background-position: center;
     height: 150px;
     width: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+    transition: all 0.07s;
     
 }
 
@@ -104,7 +113,9 @@ html {
     background-position: center;
     height: 150px;
     width: 150px;
-    
+    border: 5px solid black;
+    border-radius: 20px;
+    transition: all 0.07s;
 }
 
 .lives {
@@ -114,5 +125,15 @@ html {
     background-position: center;
     height: 100px;
     width: 90px;
-    
+    border: 5px solid black;
+    border-radius: 15px;
 }
+
+.effect{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+
+}
+
+

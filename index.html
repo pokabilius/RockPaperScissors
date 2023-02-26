@@ -5,38 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="./main.js" defer></script> -->
     <link rel="stylesheet" href="./style.css">
+    <!-- <script src="test.js" defer></script> -->
 </head>
 <body>
-    <h1 class="title">TAKE YOUR CHANCES AGAINST PC</h1>
-
+    <h1 class="title">ROCK PAPER SCISSORS</h1>
+    <p class="playerchoice"></p>
+    <p class="pcchoice"></p>
+    <p class="result"></p>
     <div class="display">
         <div class="playermodal">
             <div class="player">
-                <div class="playertile">USER</div>
+                <div class="playertitle">USER</div>
+                <div >Wins: <span class="playerwins"></span></div>
                 <div class="lives"></div>
             </div>
             <div class="choices">
-                <div class="rock"></div>
-                <div class="paper"></div>
-                <div class="scissors"></div>
+                <div class="rock image" data-key="rock"></div>
+                <div class="paper image" data-key="paper"></div>
+                <div class="scissors image" data-key="scissors"></div>
             </div>
         </div>
 
         <div class="pcmodal">
             <div class="pc">
                 <div class="pctitle">PC</div>
+                <div >Wins: <span class="pcwins"></span> </div>
                 <div class="lives"></div>
             </div>
             <div class="choices">
-                <div class="rock"></div>
-                <div class="paper"></div>
-                <div class="scissors"></div>
+                <button class="rock" id="rock"></button>
+                <button class="paper" id="paper"></button>
+                <button class="scissors" id="scissors"></button>
             </div>
         </div>
-
+        
     </div>
+    
+    
+    <script src="./main.js" defer></script>
 
 
 </body>
