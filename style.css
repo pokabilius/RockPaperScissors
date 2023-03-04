@@ -4,6 +4,8 @@
   
 }
 
+
+
 .playerchoice, .pcchoice, .result {
     color: red;
     text-align: center;
@@ -13,6 +15,10 @@ html {
     font-size: 50px;
     background-color: black;
     font-family: "retro";    
+}
+
+span {
+    margin-left: 20px;
 }
 
 .title {
@@ -90,7 +96,7 @@ html {
     width: 150px;
     border: 5px solid black;
     border-radius: 20px;
-    transition: all 0.07s;
+    transition: all 1s;
 }
 
 .paper {
@@ -102,7 +108,7 @@ html {
     width: 150px;
     border: 5px solid black;
     border-radius: 20px;
-    transition: all 0.07s;
+    transition: all 1s;
     
 }
 
@@ -115,10 +121,10 @@ html {
     width: 150px;
     border: 5px solid black;
     border-radius: 20px;
-    transition: all 0.07s;
+    transition: all 1s;
 }
 
-.lives {
+/* .lives {
     
     background-image: url("./images/heart.png");
     background-repeat: no-repeat;
@@ -127,7 +133,7 @@ html {
     width: 90px;
     border: 5px solid black;
     border-radius: 15px;
-}
+} */
 
 .effect{
     transform: scale(1.1);

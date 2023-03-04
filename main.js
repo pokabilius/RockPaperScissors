@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.image');
 let finalguess = "";
 let pcChoice = ""
 let string = ""
-// let counter = 0
+let counter = 1
 let pcWins = 0
 let playerWins = 0
 let winner = ""
@@ -13,7 +13,7 @@ let pcpara = document.querySelector(".pcchoice")
 let resultPara = document.querySelector(".result")
 const pcButtons = document.querySelectorAll('button');
 const playerLives = document.querySelector('.playerwins');
-const pcLives = document.querySelector('.pcrwins');
+const pcLives = document.querySelector('.pcwins');
 
 
 
@@ -32,6 +32,7 @@ function removeTransition (e) {
 }
 
 buttons.forEach((button) => button.addEventListener('transitionend',removeTransition));
+pcButtons.forEach((button) => button.addEventListener('transitionend',removeTransition));
 
 // Function to generate computer's choice -> returns rock papper or sciscors
 
@@ -103,15 +104,55 @@ function play(pc, player){
 function runGame(){
     play(pcChoice,finalguess)
     console.log(`player choice is ${finalguess} and pc choice is ${pcChoice}, ${resultPara}`)
+    counter++
 }
+
+function finalizeGame(){
+    pcpara.textContent = ""
+    para.textContent = ""
+    if (pcWins > playerWins){
+        resultPara.textContent = "Pc Won"
+        confirmAction()
+    }else if (playerWins > pcWins){
+        resultPara.textContent = "You Won"
+        confirmAction()
+
+    }else {
+        resultPara.textContent = "We have a draw"
+        confirmAction()
+
+    }
+    
+}
+
+function confirmAction(){
+
+    response = confirm(`${resultPara.textContent}. Do you Want to play again?`);
+
+        if (response) {
+            alert("New game Starts");
+            resultPara.textContent=""
+            counter=1
+            playerWins=0
+            pcWins=0
+            pcLives.textContent = ""
+            playerLives.textContent =""
+        } else {
+            alert("Bye Bye");
+        }
+}
+
 
 function countWins (){
     if (winner === "pc"){
         pcWins++
+        console.log(pcWins)
         pcLives.textContent = ""
         pcLives.textContent = pcLives.textContent + pcWins
     }else if (winner === "player"){
         playerWins++
+        console.log(playerWins)
+
         playerLives.textContent = ""
         playerLives.textContent = playerLives.textContent + playerWins
     }
@@ -122,46 +163,20 @@ function countWins (){
     buttons.forEach((button) => button.addEventListener('click', (e) => {
         finalguess = e.target.getAttribute('data-key')
         console.log(finalguess)
-            countWins()
-            generateComputerGuess()
-        
+        generateComputerGuess()
+        if (counter <= 5) {
+
             runGame()
+            countWins()
+        }else{
+            finalizeGame()
+        }
         }))
 
 
-f
 
 
-// //play for 5 times and count wins
-// function main (){
-//     playerWins = 0 
-//     pcWins = 0
-//     let i = 0 
-//     // while(i<5){
-//         let computerGuess = generateComputerGuess(array);
-//         console.log(`computer is ${computerGuess}`)
-//         playerPrompt();
-        
-//         console.log(finalguess);
-//         // let finalAnswer = checkUseriInput(playerChoice);
-//         let winner = play(computerGuess, finalguess)
-//         console.log(`winner is ${winner}`)
-//         if (winner === "player"){
-            
-//             playerWins++
-            
-//         }
-//         else if(winner === "pc"){    
-            
-//             pcWins++
-            
-//         }
-//         i++
-//     // }
-// }
 
-// main();
-// console.log(`Pc won ${pcWins} times`)
-// console.log(`Player won ${playerWins} times`)
+
 
 
